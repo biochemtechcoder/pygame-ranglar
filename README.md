@@ -46,14 +46,14 @@ Pygame bilan ishlatish juda qulay
 📥 O‘rnatish
 
 1. Faylni yuklab oling yoki loyihangizga qo‘shing:
-
+```
 ranglar.py
-
+```
 
 2. Keyin import qilib ishlating:
-
+```python
 from ranglar import rang
-
+```
 
 
 
@@ -62,23 +62,23 @@ from ranglar import rang
 🚀 Foydalanish misollari
 
 🔹 Oddiy ishlatish
-
+```python
 from ranglar import rang
 
 print(rang("qizil"))     # (255, 0, 0)
 print(rang("ko'k"))      # (0, 0, 255)
 print(rang("noma'lum"))  # (0, 0, 0) → avtomatik qora
-
+```
 🔹 Tasodifiy rang olish
-
+```python
 from ranglar import tasodifiy_rang, yorqin_rang, toq_rang
 
 print(tasodifiy_rang())  # masalan: (173, 216, 230)
 print(yorqin_rang())     # faqat yorqin rang, masalan: (200, 180, 250)
 print(toq_rang())        # faqat to‘q rang, masalan: (50, 30, 100)
-
+```
 🔹 Ranglarni aralashtirish
-
+```python
 from ranglar import rang, rang_aralash
 
 qizil = rang("qizil")      # (255, 0, 0)
@@ -86,41 +86,41 @@ ko'k = rang("ko'k")        # (0, 0, 255)
 
 yangi = rang_aralash(qizil, ko'k)
 print(yangi)  # (127, 0, 127) → binafsha rang
-
+```
 🔹 HEX formatga o‘tkazish
-
+```python
 from ranglar import rang_hex
 
 print(rang_hex("qizil"))   # #ff0000
 print(rang_hex("yashil"))  # #00ff00
-
+```
 🔹 Barcha ranglar ro‘yxatini ko‘rish
-
+```python
 from ranglar import ranglar_royxati
 
 print(ranglar_royxati())       # barcha rang nomlari
 print(len(ranglar_royxati()))  # nechta rang borligini chiqarish
-
+```
 🔹 Rang nomini RGB qiymatdan aniqlash
-
+```python
 from ranglar import rang_nomi
 
 print(rang_nomi((255, 0, 0)))     # "qizil"
 print(rang_nomi((255, 255, 0)))   # "sariq"
 print(rang_nomi((1, 2, 3)))       # "Noma'lum rang"
-
+```
 🔹 Eng yaqin rangni topish
-
+```python
 from ranglar import yaqin_rang
 
 print(yaqin_rang((250, 10, 10)))   # "qizil" ga yaqin
 print(yaqin_rang((10, 250, 10)))   # "yashil" ga yaqin
-
+```
 
 ---
 
 🎮 Pygame bilan ishlatish
-
+```python
 import pygame
 from ranglar import rang, tasodifiy_rang, rang_aralash
 
@@ -147,14 +147,14 @@ while ishla:
             ishla = False
 
 pygame.quit()
-
+```
 
 ---
 
 📜 Ranglar jadvalidan namunalar
 
 Rang nomi RGB qiymati
-
+```python
 qora (0, 0, 0)
 oq (255, 255, 255)
 qizil (255, 0, 0)
@@ -165,6 +165,6 @@ pushti (255, 192, 203)
 oltin (255, 215, 0)
 firuza (64, 224, 208)
 kumush (192, 192, 192)
-
+```
 
 (jami 100 ta rang mavjud!)
